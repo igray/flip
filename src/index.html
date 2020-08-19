@@ -11,16 +11,5 @@
         <span data-view="flip"></span>
       </div>
     </div>
-    <script>
-      function setupFlip(tick) {
-        Tick.helper.interval(function() {
-          tick.value++;
-          tick.root.setAttribute(
-            'aria-label', 
-            tick.value
-          );
-        }, 1000);
-      }
-    </script>
   </body>
 </html>
