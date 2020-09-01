@@ -1,7 +1,6 @@
 import "@pqina/flip/dist/flip.js";
 import "../styles/main.scss";
 
-/*
 window.handleTickInit = function(tick) {
   var timer = Tick.helper.interval(function() {
     tick.value++;
@@ -38,6 +37,5 @@ window.handleTickInit = function(tick) {
   
   observer.observe(target);
 }
-*/
 
 
