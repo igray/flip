@@ -43,6 +43,14 @@ module.exports = (env, argv) => {
           ]
         },
         {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: 'eslint-loader',
+          options: {
+            emitError: true
+          }
+        },
+        {
           test: /\.scss$/,
           use: [
             {
