@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flip</title>
   </head>
-  <body> 
+  <body>
     <div class="block-counting-box">
       <div class="counting-block__ticker">
-        <div class="tick" data-value="1990" data-did-init="handleTickInit">
+        <div class="tick">
           <div data-repeat="true" aria-hidden="true">
             <span data-view="flip"></span>
           </div>
         </div>
       </div>
     </div>
-<!--
+    <!--
     <script>
       function handleTickInit(tick) {
         var timer = Tick.helper.interval(function() {
@@ -24,12 +24,12 @@
             timer.stop();
           }
         }, 250, { autostart: false });
-        
+
         let options = {
           rootMargin: '0px',
           threshold: 1
         }
-        
+
         let callback = (entries, observer) => {
           entries.forEach(entry => {
             if (window.matchMedia('(min-width: 1150px)').matches) {
@@ -37,7 +37,7 @@
                 if (tick.value != 2000) {
                   tick.value = 1990;
                   timer.start();
-                }  
+                }
               } else {
                 tick.value = 1990;
               }
@@ -49,15 +49,15 @@
             }
           });
         };
-        
+
         let observer = new IntersectionObserver(callback, options);
         let target = document.querySelector('.counting-block__ticker');
-        
+
         observer.observe(target);
       }
     </script>
 -->
-<!--
+    <!--
     <div id="ticker" class="tick" data-value="1990" data-did-init="ticker">
       <div data-repeat="true" aria-hidden="true">
         <span data-view="flip"></span>
@@ -73,12 +73,12 @@
         var timer = Tick.helper.interval(function() {
           tick.value++;
           tick.root.setAttribute(
-            'aria-label', 
+            'aria-label',
             tick.value
           );
           if (tick.value === 2000) {
             timer.stop();
-          } 
+          }
         }, 250);
       }
     </script>
